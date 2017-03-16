@@ -1,0 +1,81 @@
+<html>
+<head>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <form class="navbar-form navbar-left" method="POST" action="/users/add">
+        <label>First Name: </label>
+        <input type="text" name="firstname" required="required" minlength="3">
+        <br>
+        <br>
+        <label>Last Name: </label>
+        <input type="text" name="lastname" required="required" minlength="3">
+        <br>
+        <br>
+        <label>Email: </label>
+        <input type="email" name="email" required="required">
+        <br>
+        <br>
+        <label>Username: </label>
+        <input type="text" name="username" required="required" minlength="6">
+        <script>
+            $("input[name='username']").blur(function(){
+    //enteredUsername = $("input[   name='username']").val()
+    
+    var data={}
+    data.enteredUsername = $("input[name='username']").val()
+    alert(data.enteredUsername)
+    $.ajax({
+        type: "POST",
+        url: '/checkUsername',
+        data: data,
+        dataType: 'application/json',
+        success:function(result){
+            if(result.error === false){
+                alert("THis is the case");
+            } else {
+                const errorMessage = result.message;
+            }
+        }
+    })
+});
+
+    // }).done(function ( result ) {
+    //  alert("ajax callback response:"+JSON.stringify(result));
+    // })
+
+
+
+
+</script>
+<%= result %>
+
+<br>
+<br>
+<label>Password: </label>
+<input type="password" name="password" required="required" minlength="6">
+<br>
+<br>
+<label>Re-enter Password: </label>
+<input type="password" name="repassword" id="repassword" required="required" minlength="6">
+<br>
+<br>
+<input type="submit" value="Submit">
+
+</form>
+
+<script type="text/javascript">
+    $("input[name='repassword'").blur(function(){
+
+        val1 = $("input[name='password']").val();
+        val2 = $("input[name='repassword']").val();
+        if(val1 !== val2){
+            alert("Password and Re-entered Password does not match")
+            $("input[name='password']").focus()
+        }
+    })
+</script>
+</body>
+</html>
