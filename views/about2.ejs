@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Affordable and professional web design">
+  <meta name="keywords" content="web design, affordable web design, professional web design">
+  <meta name="author" content="Brad Traversy">
+  <title>My Notes | Who We Are</title>
+  <link href="/public/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script src="/public/bootstrap.min.js">
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+     <div class = "container">
+      <div id ="branding">
+        <h1><span class ="highlight">My</span> Notes</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href = "/">Home</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+          <li class = "current"> <a href = "/about">Who We Are</a></li>
+        </ul>
+      </nav>  
+    </div>
+  </header>
+
+  <section id ="newsletter">
+    <div class = "container">
+      <h1>Meet The Team</h1>
+    </div>
+  </section>
+
+  <section id = "main">
+
+
+    <section class="mission-section col-sm-12 col-xs-12">
+
+      <div class="row">
+       <div class="col-sm-5 col-xs-10 ">
+
+        <br/>
+
+        <div class="col-sm-4 col-xs-12 ken_mazaika">
+          <div class="pickgradient orange"><br>
+            <img class="img-responsive" src="/public/img/ahmed.jpg"/>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-xs-12">
+          <h3>Ahmed Ahmed</h3>
+          <p>
+            Ahmed Ahmed has contributed all of the front end work to this website as well as some development on the back end. He Loves HTML/CSS and usto work on the backend with Ruby on Rails. He has been working in web development for a few years. He has a passion for coding and design. He loves developing interesting websites and web apps from scratch.
+          </p>
+
+          <p>
+            <a target="_blank" href="https://github.com/workaahmed16">GitHub</a>
+            | <a target="_blank" href="https://www.linkedin.com/in/workaahmed16/">LinkedIn</a>
+          </p>
+        </div>
+
+        <br/>
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+
+
+
+
+
+      </div>
+
+      <div class="col-sm-5 col-xs-10 col-xs-offset-1">
+
+        <br/>
+        <div class="col-sm-4 col-xs-12 marco_morawec">
+          <div class="pickgradient purple"><br>
+            <img class="img-responsive" src="/public/img/pmachiraju.jpg" />
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-xs-12">
+          <h3>Praveen Machiraju</h3>
+          <p>
+            Praveen Machiraju came up with the idea for this little project. He relies on nodeJS, ExpressJS, and Mongodb to make this web app functional. He loves Javascript. As a recent computer science graduate, he has been looking to apply his skills on interesting projects.
+          </p>
+
+          <p>
+            <a target="_blank" href="https://github.com/praveenmachiraju15">GitHub</a>
+            | <a target="_blank" href="https://www.linkedin.com/in/vedapraveenmachiraju/">LinkedIn</a>
+          </p>
+        </div>
+
+        <br/>
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+
+
+
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+        <br style="clear:both;" />
+
+      </section>
+      <br style="clear:both;" />
+    </section>
+
+  </div>
+  <footer>
+    <p>Economia Web Development, Copyright © 2017</p>
+  </footer>
+
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                <div class="loginmodal-container">
+                  <h1>Login to Your Account</h1><br>
+                  <form method="POST" action="/Login">
+                  <input type="text" name="username" placeholder="Username">
+                  <input type="password" name="password" placeholder="Password">
+                  <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                  </form>
+                  
+                  <div class="login-help">
+                  <a href="#">Forgot Password</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+
+</body>
+
+
+</html>
